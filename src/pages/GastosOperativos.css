@@ -1,0 +1,203 @@
+/* ==========================================================================
+   ESTRUCTURA GENERAL Y ENTORNO OSCURO (GASTOS OPERATIVOS)
+   ========================================================================== */
+.ops-bg {
+  min-height: 100vh;
+  background-color: #020617; /* Slate Base */
+}
+
+.ops-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Encabezado */
+.ops-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+}
+
+.ops-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.ops-badge-total {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f87171; /* Rojo/Coral de Administración */
+  background-color: rgba(248, 113, 113, 0.06);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(248, 113, 113, 0.15);
+}
+
+/* Tarjeta Contenedora */
+.ops-card {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.ops-card.no-padding {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   FORMULARIO DE REGISTRO REJILLA DINÁMICA
+   ========================================================================== */
+.ops-form {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+  .ops-form {
+    grid-template-columns: 1fr;
+  }
+  .grid-ancho {
+    grid-column: span 1;
+  }
+}
+
+.ops-input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+.ops-input:focus {
+  outline: none;
+  border-color: #f87171; /* Foco Rojo/Coral */
+  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.12);
+}
+
+/* Botón de Guardado */
+.btn-ops-submit {
+  padding: 0.65rem 1.5rem;
+  background-color: #f87171; /* Rojo/Coral Administrativo */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.12s ease-in-out;
+}
+
+.btn-ops-submit:hover {
+  background-color: #ef4444;
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.2);
+}
+
+/* ==========================================================================
+   DATAGRID / TABLA DE HISTORIAL
+   ========================================================================== */
+.ops-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ops-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.ops-table th {
+  padding: 0.9rem 1.2rem;
+  color: #64748b;
+  font-weight: 500;
+  border-bottom: 1px solid #1e293b;
+  background-color: rgba(30, 41, 59, 0.2);
+  text-align: left;
+}
+
+.ops-table td {
+  padding: 0.95rem 1.2rem;
+  border-bottom: 1px solid #1e293b;
+  vertical-align: middle;
+}
+
+.ops-table-row {
+  transition: background-color 0.1s ease;
+}
+
+.ops-table-row:hover {
+  background-color: rgba(30, 41, 59, 0.15);
+}
+
+/* Variaciones de Celda */
+.font-resaltado-ops {
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.txt-descripcion-ops {
+  color: #cbd5e1;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.color-monto-ops {
+  color: #f87171; /* Salida de dinero acentuada */
+  font-weight: 600;
+}
+
+.txt-fecha-ops {
+  color: #475569;
+  font-variant-numeric: tabular-nums;
+}
+
+.ops-vacio-txt {
+  text-align: center;
+  padding: 3.5rem !important;
+  color: #475569;
+  font-style: italic;
+}
+
+/* Botón Destructivo Elegante */
+.btn-ops-delete {
+  padding: 4px 12px;
+  background-color: transparent;
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.btn-ops-delete:hover {
+  background-color: rgba(239, 68, 68, 0.08);
+  border-color: #ef4444;
+  color: #f9fafb;
+}
+
+/* Alineaciones */
+.txt-centro { text-align: center; }

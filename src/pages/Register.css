@@ -1,0 +1,155 @@
+/* ==========================================
+   CONTENEDOR DE PÁGINA COMPLETA CENTRADA
+   ========================================== */
+.register-page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020617; /* Slate ultra oscuro idéntico al login */
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ==========================================
+   TARJETA CENTRAL DE REGISTRO
+   ========================================== */
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #0f172a; /* Azul noche profundo */
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.register-card h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f8fafc; /* Blanco frío */
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* Contenedor del formulario interno */
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ==========================================
+   CAMPOS DE ENTRADA (INPUTS)
+   ========================================== */
+.register-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background-color: #1e293b; /* Fondo de inputs ligeramente más claro */
+  color: #f8fafc;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: #38bdf8; /* Cian eléctrico activo */
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.register-input::placeholder {
+  color: #64748b;
+}
+
+/* ==========================================
+   BOTÓN PRINCIPAL DE ACCIÓN
+   ========================================== */
+.register-submit-button {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #2563eb; /* Azul cobalto */
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin-top: 0.4rem;
+}
+
+.register-submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.register-submit-button:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   MENSAJES DE ESTADO (ALERTAS TEMPORALES)
+   ========================================== */
+.register-status-msg {
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-align: left;
+  animation: feedbackFadeIn 0.2s ease-out;
+}
+
+/* Variante de Error */
+.register-status-msg.error {
+  color: #fda4af;
+  background-color: rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+/* Variante de Éxito */
+.register-status-msg.exito {
+  color: #a7f3d0; /* Verde esmeralda sutil */
+  background-color: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+@keyframes feedbackFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   TEXTO Y ENLACE DE CONMUTACIÓN (SWITCH)
+   ========================================== */
+.register-switch-login {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.register-link-button {
+  background: none;
+  border: none;
+  color: #38bdf8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  text-decoration: none;
+}
+
+.register-link-button:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}

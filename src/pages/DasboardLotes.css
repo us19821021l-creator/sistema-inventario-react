@@ -1,0 +1,205 @@
+/* ==========================================================================
+   ESTRUCTURA GENERAL Y CONTENEDOR MODO OSCURO
+   ========================================================================== */
+.lotes-bg {
+  min-height: 100vh;
+  background-color: #020617; /* Slate Base */
+}
+
+.lotes-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Encabezado Principal */
+.lotes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+}
+
+.lotes-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.lotes-badge-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a855f7; /* Púrpura */
+  background-color: rgba(168, 85, 247, 0.06);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+/* Estado Vacío */
+.lotes-vacio-card {
+  background-color: #0f172a;
+  border: 1px dashed #334155;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   TARJETAS DE PRODUCTOS Y METADATOS
+   ========================================================================== */
+.producto-lote-card {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra superior de información dentro de la tarjeta */
+.producto-lote-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .producto-lote-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.meta-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0 0 0.4rem 0;
+}
+
+/* Indicadores de Stock */
+.stock-indicator {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.stock-indicator.estable {
+  background-color: rgba(56, 189, 248, 0.06);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.stock-indicator.critico {
+  background-color: rgba(239, 68, 68, 0.06);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+/* Bloque de Valor de Inventario */
+.meta-financiera {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media (max-width: 640px) {
+  .meta-financiera {
+    align-items: flex-start;
+  }
+}
+
+.label-financiero {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.monto-financiero {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #10b981; /* Verde Esmeralda */
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   TABLA DETALLADA DE LOTES (DATAGRID)
+   ========================================================================== */
+.lotes-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.lotes-main-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.lotes-main-table th {
+  padding: 0.75rem 1rem;
+  color: #64748b;
+  font-weight: 500;
+  border-bottom: 1px solid #1e293b;
+  text-align: left;
+}
+
+.lotes-main-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+  vertical-align: middle;
+}
+
+.fila-lote {
+  transition: background-color 0.12s ease;
+}
+
+.fila-lote:hover {
+  background-color: rgba(30, 41, 59, 0.2);
+}
+
+/* Estilos de Celdas Específicas */
+.txt-fecha {
+  color: #cbd5e1;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-resaltado {
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.txt-costo-consolidado {
+  color: #facc15; /* Ámbar para marcar el costo real calculado */
+  font-weight: 600;
+}
+
+.color-subtotal {
+  color: #f1f5f9;
+}
+
+.lotes-tabla-vacera {
+  text-align: center;
+  padding: 2rem !important;
+  color: #475569;
+  font-style: italic;
+}
+
+/* Alineaciones Utilitarias */
+.txt-derecha { text-align: right; }

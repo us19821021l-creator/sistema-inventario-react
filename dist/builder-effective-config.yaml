@@ -1,0 +1,32 @@
+directories:
+  output: dist
+  buildResources: assets
+files:
+  - filter:
+      - build/**/*
+      - build
+      - electron
+      - package.json
+extraMetadata:
+  main: electron/main.js
+appId: com.sistemaurban.app
+productName: Sistema US Premium
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Sistema ZAD
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Office
+  icon: electron/assets/icon.png
+extends: react-cra
+electronVersion: 42.3.2

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   LAYOUT Y ARQUITECTURA GRID MÁSTER
+   ========================================================================== */
+.main-dashboard-bg {
+  min-height: 100vh;
+  background-color: #020617; /* Sincronizado con subcomponentes */
+  color: #f8fafc;
+}
+
+.layout-grid-master {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .layout-grid-master {
+    grid-template-columns: 1fr; /* Responsivo para tabletas y móviles */
+  }
+}
+
+/* ==========================================================================
+   PANEL LATERAL (SIDEBAR)
+   ========================================================================== */
+.app-sidebar {
+  background-color: #0f172a;
+  border-right: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .app-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #1e293b;
+  }
+}
+
+/* Identidad de la Marca */
+.sidebar-brand {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 0.5rem 1rem 0.5rem;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.7);
+}
+
+.sidebar-brand h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.brand-version {
+  font-size: 0.7rem;
+  color: #475569;
+  font-family: monospace;
+}
+
+/* Bloque de Botones de Navegación */
+.sidebar-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
+  flex-grow: 1;
+}
+
+.nav-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 0.5rem 0.2rem 0.5rem;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(30, 41, 59, 0.5);
+  color: #f1f5f9;
+}
+
+.nav-btn.active {
+  background-color: #1e293b;
+  color: #38bdf8; /* Resaltado activo cyan */
+  font-weight: 600;
+}
+
+/* Separadores Estilizados */
+.nav-divider {
+  height: 1px;
+  background-color: rgba(30, 41, 59, 0.5);
+  margin: 0.75rem 0.5rem;
+}
+
+/* ==========================================================================
+   SISTEMA DE COPIAS DE SEGURIDAD (FOOTER)
+   ========================================================================== */
+.sidebar-footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(30, 41, 59, 0.7);
+}
+
+.btn-backup {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.12s ease;
+}
+
+.btn-backup.export {
+  background-color: rgba(30, 41, 59, 0.8);
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+
+.btn-backup.export:hover {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.btn-backup.import {
+  background-color: transparent;
+  border: 1px dashed #334155;
+  color: #64748b;
+}
+
+.btn-backup.import:hover {
+  border-color: #6366f1; /* Púrpura de importación */
+  color: #a5b4fc;
+}
+
+/* ==========================================================================
+   VISUALIZADOR CENTRAL DE CONTENIDO
+   ========================================================================== */
+.layout-content-viewer {
+  padding: 0;
+  background-color: #020617;
+  overflow-y: auto;
+  max-height: 100vh;
+}

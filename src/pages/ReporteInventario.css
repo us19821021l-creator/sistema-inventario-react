@@ -1,0 +1,288 @@
+/* ==========================================
+   CONTENEDOR GENERAL Y CAPA DE FONDO
+   ========================================== */
+.reporte-bg {
+  min-height: 100vh;
+  background-color: #020617; /* Slate ultra oscuro */
+}
+
+.reporte-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #cbd5e1;
+}
+
+/* Encabezados */
+.reporte-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+}
+
+.reporte-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.reporte-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fda4af; /* Coral suave */
+  background-color: rgba(244, 63, 94, 0.08);
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(244, 63, 94, 0.15);
+}
+
+/* ==========================================
+   ESTRUCTURA DE TARJETAS (CARDS)
+   ========================================== */
+.reporte-card {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.reporte-card-panel {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   TABLA PRINCIPAL DE CONTROL
+   ========================================== */
+.reporte-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.reporte-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.reporte-table th {
+  padding: 1rem;
+  font-weight: 500;
+  color: #64748b;
+  border-bottom: 1px solid #1e293b;
+  background-color: rgba(15, 23, 42, 0.4);
+}
+
+.reporte-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #1e293b;
+  color: #94a3b8;
+  vertical-align: middle;
+}
+
+.reporte-fila:hover {
+  background-color: rgba(30, 41, 59, 0.2);
+}
+
+.reporte-vacio-txt {
+  text-align: center;
+  color: #34d399;
+  font-weight: 500;
+  padding: 3.5rem !important;
+}
+
+/* Modificadores de Celda */
+.font-destacada {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.monto-resaltado {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.color-cyan {
+  color: #38bdf8;
+}
+
+/* Badges de cantidades */
+.stock-badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+.stock-badge.actual {
+  background-color: #1e293b;
+  color: #94a3b8;
+}
+.stock-badge.faltante {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+/* Input integrado en la tabla */
+.reporte-input-cell {
+  width: 80px;
+  padding: 6px 10px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.reporte-input-cell:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+/* ==========================================
+   GRID INFERIOR (ENVÍO Y RESUMEN)
+   ========================================== */
+.reporte-grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .reporte-grid-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.centralizado-flex {
+  display: flex;
+  align-items: center;
+}
+
+.envio-input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.envio-input-block label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.reporte-input-envio {
+  width: 100%;
+  max-width: 220px;
+  padding: 0.7rem 0.9rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+}
+
+.reporte-input-envio:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.envio-descriptor-txt {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Tabla de Resumen Matemática */
+.resumen-titulo {
+  font-size: 1rem;
+  color: #f8fafc;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.reporte-resumen-table {
+  width: 100%;
+  font-size: 0.88rem;
+}
+
+.reporte-resumen-table td {
+  padding: 0.5rem 0;
+  color: #94a3b8;
+}
+
+.txt-derecha { text-align: right; }
+
+.fila-total-destacada td {
+  border-top: 1px dashed #334155;
+  padding-top: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #34d399; /* Verde esmeralda para el total definitivo */
+}
+
+/* ==========================================
+   BOTONERA / ACCIONES DE NAVEGACIÓN
+   ========================================== */
+.reporte-actions-bar {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn-reporte {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Variante Botón Primario (Ingresar datos a memoria) */
+.btn-reporte.principal {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+.btn-reporte.principal:hover {
+  background-color: #1d4ed8;
+}
+
+/* Variante Botones Secundarios (Auxiliares y reportes externos) */
+.btn-reporte.secundario {
+  background-color: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+.btn-reporte.secundario:hover {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+.btn-reporte:active {
+  transform: scale(0.98);
+}

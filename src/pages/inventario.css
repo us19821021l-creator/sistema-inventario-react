@@ -1,0 +1,263 @@
+/* ==========================================
+   PALETA FRÍA OSCURA & BLOQUE PRINCIPAL
+   ========================================== */
+.inventario-bg {
+  min-height: 100vh;
+  background-color: #020617; /* Slate ultra oscuro */
+}
+
+.inventario-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #cbd5e1;
+}
+
+.inventario-header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+}
+
+.inventario-header-block h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.sync-timestamp {
+  font-size: 0.8rem;
+  color: #64748b;
+  background-color: #0f172a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
+}
+
+/* ==========================================
+   TARJETAS CONTENEDORAS DE MÓDULOS
+   ========================================== */
+.inventario-card-wrapper {
+  background-color: #0f172a; /* Fondo azul noche */
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.inventario-card-wrapper h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+/* ==========================================
+   FORMULARIO E INPUTS GRID
+   ========================================== */
+.inventario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr); /* El nombre toma el doble de espacio */
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inventario-container input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: #f8fafc;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.inventario-container input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+}
+
+.btn-agregar-prod {
+  padding: 0.75rem;
+  background-color: #2563eb; /* Azul cobalto moderno */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.92rem;
+  transition: background-color 0.2s;
+  align-self: flex-end;
+  min-width: 180px;
+}
+
+.btn-agregar-prod:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .btn-agregar-prod {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   ESTRUCTURA DE TABLA DE DATOS
+   ========================================== */
+.tabla-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.inventario-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.inventario-table th {
+  padding: 0.85rem 1rem;
+  font-weight: 500;
+  color: #64748b;
+  border-bottom: 1px solid #1e293b;
+  background-color: rgba(15, 23, 42, 0.6);
+}
+
+.inventario-table td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid #1e293b;
+  color: #94a3b8;
+  vertical-align: middle;
+}
+
+/* Filas con stock bajo */
+.fila-alerta {
+  background-color: rgba(244, 63, 94, 0.02);
+}
+
+.txt-blanco { color: #f8fafc; font-weight: 500; }
+.txt-cian { color: #38bdf8; font-weight: 500; }
+.txt-verde { color: #34d399; font-weight: 500; }
+.txt-centro { text-align: center; }
+
+.txt-vacio {
+  text-align: center;
+  color: #475569;
+  padding: 2.5rem !important;
+}
+
+.flex-col-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.subbadge-critico {
+  font-size: 0.72rem;
+  color: #f43f5e;
+  font-weight: 500;
+}
+
+/* Badges de Existencias */
+.badge-stock {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-stock.normal {
+  background-color: rgba(51, 65, 85, 0.5);
+  color: #cbd5e1;
+}
+
+.badge-stock.critico {
+  background-color: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+/* Inputs incrustados en celdas para edición */
+.input-tabla-edit {
+  padding: 0.35rem 0.6rem !important;
+  font-size: 0.85rem !important;
+  background-color: #0f172a !important;
+}
+
+.inputs-edicion-stock-min {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: #64748b;
+  align-items: flex-start;
+}
+
+/* ==========================================
+   BOTONES DE ACCIONES EN LA TABLA
+   ========================================== */
+.flex-acciones-botones {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.btn-tabla-accion {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: all 0.15s ease;
+}
+
+.btn-tabla-accion:hover {
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.btn-tabla-accion.eliminar:hover {
+  background-color: rgba(244, 63, 94, 0.1);
+  color: #f43f5e;
+  border-color: rgba(244, 63, 94, 0.3);
+}
+
+.btn-tabla-accion.guardar {
+  background-color: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+.btn-tabla-accion.guardar:hover {
+  background-color: #34d399;
+  color: #0f172a;
+}

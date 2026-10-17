@@ -1,0 +1,167 @@
+/* ==========================================================================
+   ESTRUCTURA GENERAL Y ENTORNO OSCURO
+   ========================================================================== */
+.dashboard-bg {
+  min-height: 100vh;
+  background-color: #020617; /* Slate base */
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Encabezado */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 1rem;
+}
+
+.dashboard-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-tag-live {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.06);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+/* ==========================================================================
+   SISTEMA DE TARJETAS INFORMATIVAS (KPIs)
+   ========================================================================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.kpi-card {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+}
+
+/* Labels de Identificación */
+.kpi-label { color: #64748b; font-size: 0.82rem; font-weight: 500; }
+.kpi-label-alt { color: #94a3b8; font-size: 0.82rem; font-weight: 500; }
+.kpi-label-warning { color: #fca5a5; font-size: 0.82rem; font-weight: 500; }
+.font-pfc { color: #94a3b8; }
+
+/* Tipos de Montos / Cifras */
+.kpi-monto {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0.5rem 0 0 0;
+  letter-spacing: -0.01em;
+}
+
+/* Modificadores Semánticos de KPIs */
+.kpi-card.success {
+  background-color: rgba(15, 23, 42, 0.6);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+.kpi-card.warning {
+  background-color: rgba(239, 68, 68, 0.02);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Colores de fuentes específicos */
+.text-esmeralda { color: #10b981 !important; }
+.text-coral { color: #f87171 !important; }
+.text-slate { color: #cbd5e1 !important; }
+.kpi-unidad-txt { font-size: 0.8rem; font-weight: 400; color: #475569; }
+
+/* Tarjeta especial de liquidación de socios */
+.kpi-card.destacado-socio {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 640px) {
+  .kpi-card.destacado-socio { grid-column: span 1; }
+}
+
+.kpi-label-socio {
+  color: #c084fc;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.kpi-monto-socio {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e9d5ff;
+  margin: 0.4rem 0;
+}
+
+.kpi-retenido-nota {
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.7);
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   REJILLA Y CONTENEDORES DE GRÁFICAS
+   ========================================================================== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+.chart-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+/* Limitador de altura estricto para evitar deformación por Chart.js */
+.chart-canvas-container {
+  position: relative;
+  height: 260px;
+  width: 100%;
+}

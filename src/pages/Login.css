@@ -1,0 +1,139 @@
+/* ==========================================
+   CONTENEDOR DE PÁGINA COMPLETA CENTRADA
+   ========================================== */
+.login-page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020617; /* Slate ultra oscuro de fondo general */
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ==========================================
+   TARJETA CENTRAL DE LOGIN
+   ========================================== */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #0f172a; /* Azul noche profundo */
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.login-card h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f8fafc; /* Blanco frío */
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* Contenedor del formulario interno */
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ==========================================
+   CAMPOS DE ENTRADA (INPUTS)
+   ========================================== */
+.login-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background-color: #1e293b; /* Fondo ligeramente más claro que la tarjeta */
+  color: #f8fafc;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #38bdf8; /* Cian eléctrico para foco activo */
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.login-input::placeholder {
+  color: #64748b; /* Gris azulado apagado para el placeholder */
+}
+
+/* ==========================================
+   BOTÓN PRINCIPAL DE ACCIÓN
+   ========================================== */
+.login-submit-button {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #2563eb; /* Azul corporativo moderno */
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin-top: 0.4rem;
+}
+
+.login-submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.login-submit-button:active {
+  transform: scale(0.98); /* Pequeño efecto táctil al pulsar */
+}
+
+/* ==========================================
+   ALERTA DE ERROR INTERNA
+   ========================================== */
+.login-error-msg {
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  color: #fda4af; /* Coral / rosa pastel sutil */
+  background-color: rgba(244, 63, 94, 0.1); /* Fondo rojizo translúcido */
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* ==========================================
+   TEXTO Y ENLACE DE CONMUTACIÓN (SWITCH)
+   ========================================== */
+.login-switch-register {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* Botón estilizado como link minimalista */
+.login-link-button {
+  background: none;
+  border: none;
+  color: #38bdf8; /* Texto en cian */
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  text-decoration: none;
+}
+
+.login-link-button:hover {
+  color: #7dd3fc;
+  text-decoration: underline; /* Subrayado clásico al pasar el mouse */
+}
